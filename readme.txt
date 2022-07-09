@@ -18,7 +18,7 @@ from the installer recommended in Leoreth's thread:
 See this CFC post for context about these additions:
     https://forums.civfanatics.com/threads/cvgamecoredll-build-error-boost-python-list-hpp.648072/page-2#post-15515986
 
-The main benefit of using SP 1 (from the C2C subforum) that I've encountered is that linking debug builds with msvcprtd no longer causes (misleading?) LNK4229 and LNK4078 warnings when std::stable_sort is used. At least one other (useful) std function seems to cause those warnings as well. And release builds with /OPT:REF no longer cause the LNK4089 warning.
+SP 1 adds msvcprtd.lib. It seems that the BtS uses of the standard library don't necessitate that file, but, in a mod, e.g. std::stable_sort seems to cause the compiler to fall back on whichever version of msvcprtd.lib is available in Miscrosoft Visual Studio (VS), which will likely be too recent for the 2003 compiler. The proper version of msvcprtd.lib also seems to get rid of unhelpful LNK4089 warnings in release builds with /OPT:REF. I don't know if SP 1 has significant benefits beyond msvcprtd.lib over the non-upgraded toolkit.
 
 2) has been obtained from this post in the C2C subforum:
     https://forums.civfanatics.com/threads/building-a-new-tag-in-c2c-code.640222/page-2#post-15449499
