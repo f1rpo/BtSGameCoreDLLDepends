@@ -3,7 +3,7 @@ Microsoft libraries needed for re-building CvGameCoreDLL.dll for Sid Meier's Civ
 1) Service Pack 1 of the 2003 Microsoft Visual C++ Toolkit
 2) Version 6.0 of the Microsoft Windows Platform Software Development Kit
 
-The community-created makefiles for BtS refer to these dependencies through variables named (usually) TOOLKIT and PSDK respectively. Each variable needs to be set to the path of the folder containing the bin, include and lib subfolders. As for the CIV4_PATH (or CIVINSTALL) variable - that one should point to the BtS install folder. Any other folder containing Boost 1.32 and Python 2.4 will also work. In any case, every modder and player should already have those two libraries, so I'm not including them here.
+The community-created makefiles for BtS refer to these dependencies through variables named (usually) TOOLKIT and PSDK respectively. Each variable needs to be set to the path of the folder containing the bin, include and lib subfolders. As for the CIV4_PATH (or CIVINSTALL) variable - that one should point to the CvGameCoreDLL subfolder in the BtS install folder. Any other folder containing Boost 1.32 and Python 2.4 will also work. In any case, every modder and player should already have those two libraries, so I'm not including them here.
 
 Regarding the specific library versions:
 1) is based on this file attachment in the Caveman2Cosmos (C2C) subforum of the CivFanatics community (CFC):
